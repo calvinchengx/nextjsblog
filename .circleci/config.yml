@@ -11,7 +11,7 @@ jobs:
           steps:
             - run: npm install
             - run:
-                ame: Unit Test with Code Coverage
+                name: Unit Test with Code Coverage
                 command: |
                   curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
                   chmod +x ./cc-test-reporter
@@ -20,6 +20,7 @@ jobs:
                   ./cc-test-reporter after-build -t lcov -r ${TEST_REPORTER_ID}
 
 workflows:
-  build-and-test:
-    jobs:
-      - build-and-test
+    build-and-test:
+      jobs:
+        - build-and-test
+
