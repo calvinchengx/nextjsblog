@@ -1,6 +1,8 @@
 import matter from 'gray-matter'
 import Layout from '../components/Layout'
 import BlogList from '../components/BlogList'
+import fs from 'fs'
+import path from 'path'
 
 function slugifyDate(fullDate) {
   let d = new Date(fullDate),
@@ -28,34 +30,33 @@ export default Index
 
 export async function getStaticProps() {
   const siteConfig = await import(`../data/config.json`)
-  //get posts & context from folder
-  const posts = ((context) => {
-    const keys = context.keys()
-    const values = keys.map(context)
 
-    const data = keys.map((key, index) => {
-      // Create slug from filename
+  const postsDir = path.resolve(process.cwd(), 'src', 'posts')
+  const allPosts = fs.readdirSync(postsDir)
 
-      const value = values[index]
-      // Parse yaml metadata & markdownbody in document
-      const document = matter(value.default)
-      const dateSlug = slugifyDate(document.data.date)
-      const slug =
-        dateSlug +
-        '/' +
-        key
-          .replace(/^.*[\\\/]/, '')
-          .split('.')
-          .slice(0, -1)
-          .join('.')
-      return {
-        frontmatter: document.data,
-        markdownBody: document.content,
-        slug
-      }
+  const posts = []
+  for (let p of allPosts) {
+    let post = fs.readFileSync(path.resolve(postsDir, p), {
+      encoding: 'utf8'
     })
-    return data
-  })(require.context('../posts', true, /\.md$/))
+    // Parse yaml metadata & markdownbody in document
+    const document = matter(post)
+    const dateSlug = slugifyDate(document.data.date)
+    const slug =
+      dateSlug +
+      '/' +
+      p
+        .replace(/^.*[\\\/]/, '')
+        .split('.')
+        .slice(0, -1)
+        .join('.')
+    const data = {
+      frontmatter: document.data,
+      markdownBody: document.content,
+      slug
+    }
+    posts.push(data)
+  }
 
   return {
     props: {
