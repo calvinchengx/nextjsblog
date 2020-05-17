@@ -1,7 +1,10 @@
 import * as React from 'react'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
-const glob = require('glob')
+// const glob = require('glob')
+import glob from 'glob'
+import fs from 'fs'
+import path from 'path'
 
 import Layout from '../../../../components/Layout'
 
@@ -173,16 +176,21 @@ export default function BlogTemplate({ frontmatter, markdownBody, title }) {
 }
 
 export async function getStaticProps({ ...ctx }) {
+  console.log('ctx:', ctx)
   const { slug } = ctx.params
-  const content = await import(`../../../../posts/${slug}.md`)
+  const postsDir = path.resolve(process.cwd(), 'src', 'posts')
+  const p = slug + '.md'
+  const post = fs.readFileSync(path.resolve(postsDir, p), {
+    encoding: 'utf8'
+  })
   const config = await import(`../../../../data/config.json`)
-  const data = matter(content.default)
+  const document = matter(post)
 
   return {
     props: {
       title: config.title,
-      frontmatter: data.data,
-      markdownBody: data.content
+      frontmatter: document.data,
+      markdownBody: document.content
     }
   }
 }
@@ -190,17 +198,21 @@ export async function getStaticProps({ ...ctx }) {
 export async function getStaticPaths() {
   // get all .md files in the posts dir
   const blogs = glob.sync('src/posts/**/*.md')
+  const postsDir = path.resolve(process.cwd(), 'src', 'posts')
 
   // remove path and extension to leave filename only
   let paths = []
   for (let i = 0; i < blogs.length; i++) {
     const file = blogs[i]
     const slug = file.split('/')[2].replace(/ /g, '-').slice(0, -3).trim()
-    const content = await import(`../../../../posts/${slug}.md`)
-    const data = matter(content.default)
-    const frontmatter = data.data
-    const path = slugifyDate(frontmatter.date) + '/' + slug
-    paths.push(path)
+    const p = slug + '.md'
+    const post = fs.readFileSync(path.resolve(postsDir, p), {
+      encoding: 'utf8'
+    })
+    const document = matter(post)
+    const frontmatter = document.data
+    const slugPath = slugifyDate(frontmatter.date) + '/' + slug
+    paths.push(slugPath)
   }
 
   return {
