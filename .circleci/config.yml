@@ -1,0 +1,25 @@
+version: 2.1
+orbs:
+  node: circleci/node@1.1.6
+jobs:
+  build-and-test:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - run: npm install
+            - run:
+                ame: Unit Test with Code Coverage
+                command: |
+                  curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+                  chmod +x ./cc-test-reporter
+                  ./cc-test-reporter before-build
+                  npm run test:coverage
+                  ./cc-test-reporter after-build -t lcov -r ${TEST_REPORTER_ID}
+
+workflows:
+  build-and-test:
+    jobs:
+      - build-and-test
