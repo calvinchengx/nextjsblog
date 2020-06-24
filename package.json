@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^2.3.0",
-    "autoprefixer": "^9.8.3",
+    "autoprefixer": "^9.8.4",
     "gray-matter": "^4.0.2",
     "next": "9.4.4",
     "next-compose-plugins": "^2.2.0",
