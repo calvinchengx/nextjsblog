@@ -18,7 +18,7 @@
     "@fullhuman/postcss-purgecss": "^2.3.0",
     "autoprefixer": "^9.8.5",
     "gray-matter": "^4.0.2",
-    "next": "9.4.4",
+    "next": "9.5.0",
     "next-compose-plugins": "^2.2.0",
     "next-offline": "^5.0.2",
     "node-glob": "^1.2.0",
