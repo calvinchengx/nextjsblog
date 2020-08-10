@@ -32,7 +32,7 @@
   "devDependencies": {
     "babel-plugin-transform-define": "^2.0.0",
     "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.2",
+    "enzyme-adapter-react-16": "^1.15.3",
     "fs-extra": "^9.0.1",
     "jest": "^26.2.2",
     "jest-transform-stub": "^2.0.0",
