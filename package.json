@@ -15,7 +15,7 @@
     "test:coverage": "jest --coverage"
   },
   "dependencies": {
-    "@fullhuman/postcss-purgecss": "^2.3.0",
+    "@fullhuman/postcss-purgecss": "^3.0.0",
     "autoprefixer": "^9.8.6",
     "gray-matter": "^4.0.2",
     "next": "9.5.3",
