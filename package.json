@@ -33,7 +33,7 @@
     "babel-plugin-transform-define": "^2.0.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.5",
-    "fs-extra": "^9.0.1",
+    "fs-extra": "^9.1.0",
     "jest": "^26.6.3",
     "jest-transform-stub": "^2.0.0",
     "rimraf": "^3.0.2",
