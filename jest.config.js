@@ -17,7 +17,7 @@ const customJestConfig = {
   moduleFileExtensions: ['js', 'jsx', 'json', 'node'],
   testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
   transform: {
-    '^.+\\.js$': 'babel-jest', // anything .js is babel'd for jest to consume
+    '^.+\\.js$': ['babel-jest', { presets: ["next/babel"] }], // anything .js is babel'd for jest to consume
     '^.+.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$':
       'jest-transform-stub' // anything style related is ignored and mapped to jest-transform-stub module
   },
