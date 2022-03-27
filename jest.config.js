@@ -1,5 +1,18 @@
-module.exports = {
-  setupFilesAfterEnv: ['<rootDir>/__setup__/enzyme.js'],
+// jest.config.js
+const nextJest = require('next/jest')
+
+const createJestConfig = nextJest({
+  // Provide the path to your Next.js app to load next.config.js and .env files in your test environment
+  dir: './',
+})
+
+const jestConfig = {
+  setupFilesAfterEnv: ['<rootDir>/__setup__/jest.setup.js'],
+  // Add more setup options before each test is run
+  // setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  // if using TypeScript with a baseUrl set to the root directory then you need the below for alias' to work
+  moduleDirectories: ['node_modules', '<rootDir>/'],
+  testEnvironment: 'jest-environment-jsdom',
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.jsx?$',
   moduleFileExtensions: ['js', 'jsx', 'json', 'node'],
   testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
@@ -19,3 +32,5 @@ module.exports = {
     '!<rootDir>/src/pages/_document.js'
   ]
 }
+
+module.exports = jestConfig
