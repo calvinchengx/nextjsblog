@@ -1,6 +1,6 @@
 // next
 const debug = process.env.NODE_ENV !== 'production'
-const nextConfig = {
+const customConfig = {
   exportPathMap: function () {
     return {
       '/': { page: '/' }
@@ -16,4 +16,4 @@ const nextConfig = {
   }
 }
 
-module.exports = nextConfig
+module.exports = customConfig

@@ -6,7 +6,7 @@ const createJestConfig = nextJest({
   dir: './',
 })
 
-const jestConfig = {
+const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/__setup__/jest.setup.js'],
   // Add more setup options before each test is run
   // setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
@@ -33,4 +33,4 @@ const jestConfig = {
   ]
 }
 
-module.exports = jestConfig
+module.exports = createJestConfig(customJestConfig)
