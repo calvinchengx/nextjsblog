@@ -15,7 +15,7 @@
     "test:coverage": "jest --coverage"
   },
   "dependencies": {
-    "autoprefixer": "^10.3.7",
+    "autoprefixer": "^10.4.5",
     "gray-matter": "^4.0.3",
     "next": "^12.1.5",
     "node-glob": "^1.2.0",
