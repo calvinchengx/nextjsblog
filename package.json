@@ -31,7 +31,7 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "eslint": "8.14.0",
-    "eslint-config-next": "12.1.5",
+    "eslint-config-next": "12.1.6",
     "jest": "^28.0.3",
     "jest-environment-jsdom": "^28.0.2",
     "jest-transform-stub": "^2.0.0",
