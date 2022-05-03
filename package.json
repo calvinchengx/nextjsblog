@@ -17,7 +17,7 @@
   "dependencies": {
     "autoprefixer": "^10.4.5",
     "gray-matter": "^4.0.3",
-    "next": "^12.1.5",
+    "next": "^12.1.6",
     "node-glob": "^1.2.0",
     "raw-loader": "^4.0.2",
     "react": "^18.1.0",
