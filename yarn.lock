@@ -954,15 +954,6 @@
     slash "^3.0.0"
     strip-ansi "^6.0.0"
 
-"@jest/environment@^28.0.2":
-  version "28.0.2"
-  resolved "https://registry.npmjs.org/@jest/environment/-/environment-28.0.2.tgz"
-  dependencies:
-    "@jest/fake-timers" "^28.0.2"
-    "@jest/types" "^28.0.2"
-    "@types/node" "*"
-    jest-mock "^28.0.2"
-
 "@jest/environment@^28.1.0":
   version "28.1.0"
   resolved "https://registry.yarnpkg.com/@jest/environment/-/environment-28.1.0.tgz#dedf7d59ec341b9292fcf459fd0ed819eb2e228a"
@@ -984,17 +975,6 @@
   dependencies:
     expect "^28.1.0"
     jest-snapshot "^28.1.0"
-
-"@jest/fake-timers@^28.0.2":
-  version "28.0.2"
-  resolved "https://registry.npmjs.org/@jest/fake-timers/-/fake-timers-28.0.2.tgz"
-  dependencies:
-    "@jest/types" "^28.0.2"
-    "@sinonjs/fake-timers" "^9.1.1"
-    "@types/node" "*"
-    jest-message-util "^28.0.2"
-    jest-mock "^28.0.2"
-    jest-util "^28.0.2"
 
 "@jest/fake-timers@^28.1.0":
   version "28.1.0"
@@ -1095,17 +1075,6 @@
     pirates "^4.0.4"
     slash "^3.0.0"
     write-file-atomic "^4.0.1"
-
-"@jest/types@^28.0.2":
-  version "28.0.2"
-  resolved "https://registry.npmjs.org/@jest/types/-/types-28.0.2.tgz"
-  dependencies:
-    "@jest/schemas" "^28.0.2"
-    "@types/istanbul-lib-coverage" "^2.0.0"
-    "@types/istanbul-reports" "^3.0.0"
-    "@types/node" "*"
-    "@types/yargs" "^17.0.8"
-    chalk "^4.0.0"
 
 "@jest/types@^28.1.0":
   version "28.1.0"
@@ -3178,17 +3147,17 @@ jest-each@^28.1.0:
     jest-util "^28.1.0"
     pretty-format "^28.1.0"
 
-jest-environment-jsdom@^28.0.2:
-  version "28.0.2"
-  resolved "https://registry.npmjs.org/jest-environment-jsdom/-/jest-environment-jsdom-28.0.2.tgz"
+jest-environment-jsdom@^28.1.0:
+  version "28.1.0"
+  resolved "https://registry.yarnpkg.com/jest-environment-jsdom/-/jest-environment-jsdom-28.1.0.tgz#1042cffd0343615c5fac2d2c8da20d1d43b73ef8"
   dependencies:
-    "@jest/environment" "^28.0.2"
-    "@jest/fake-timers" "^28.0.2"
-    "@jest/types" "^28.0.2"
+    "@jest/environment" "^28.1.0"
+    "@jest/fake-timers" "^28.1.0"
+    "@jest/types" "^28.1.0"
     "@types/jsdom" "^16.2.4"
     "@types/node" "*"
-    jest-mock "^28.0.2"
-    jest-util "^28.0.2"
+    jest-mock "^28.1.0"
+    jest-util "^28.1.0"
     jsdom "^19.0.0"
 
 jest-environment-node@^28.1.0:
@@ -3253,20 +3222,6 @@ jest-matcher-utils@^28.1.0:
     jest-get-type "^28.0.2"
     pretty-format "^28.1.0"
 
-jest-message-util@^28.0.2:
-  version "28.0.2"
-  resolved "https://registry.npmjs.org/jest-message-util/-/jest-message-util-28.0.2.tgz"
-  dependencies:
-    "@babel/code-frame" "^7.12.13"
-    "@jest/types" "^28.0.2"
-    "@types/stack-utils" "^2.0.0"
-    chalk "^4.0.0"
-    graceful-fs "^4.2.9"
-    micromatch "^4.0.4"
-    pretty-format "^28.0.2"
-    slash "^3.0.0"
-    stack-utils "^2.0.3"
-
 jest-message-util@^28.1.0:
   version "28.1.0"
   resolved "https://registry.yarnpkg.com/jest-message-util/-/jest-message-util-28.1.0.tgz#7e8f0b9049e948e7b94c2a52731166774ba7d0af"
@@ -3280,13 +3235,6 @@ jest-message-util@^28.1.0:
     pretty-format "^28.1.0"
     slash "^3.0.0"
     stack-utils "^2.0.3"
-
-jest-mock@^28.0.2:
-  version "28.0.2"
-  resolved "https://registry.npmjs.org/jest-mock/-/jest-mock-28.0.2.tgz"
-  dependencies:
-    "@jest/types" "^28.0.2"
-    "@types/node" "*"
 
 jest-mock@^28.1.0:
   version "28.1.0"
@@ -3408,17 +3356,6 @@ jest-snapshot@^28.1.0:
 jest-transform-stub@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/jest-transform-stub/-/jest-transform-stub-2.0.0.tgz"
-
-jest-util@^28.0.2:
-  version "28.0.2"
-  resolved "https://registry.npmjs.org/jest-util/-/jest-util-28.0.2.tgz"
-  dependencies:
-    "@jest/types" "^28.0.2"
-    "@types/node" "*"
-    chalk "^4.0.0"
-    ci-info "^3.2.0"
-    graceful-fs "^4.2.9"
-    picomatch "^2.2.3"
 
 jest-util@^28.1.0:
   version "28.1.0"
@@ -4314,15 +4251,6 @@ pretty-format@^27.0.0, pretty-format@^27.0.2, pretty-format@^27.5.1:
     ansi-regex "^5.0.1"
     ansi-styles "^5.0.0"
     react-is "^17.0.1"
-
-pretty-format@^28.0.2:
-  version "28.0.2"
-  resolved "https://registry.npmjs.org/pretty-format/-/pretty-format-28.0.2.tgz"
-  dependencies:
-    "@jest/schemas" "^28.0.2"
-    ansi-regex "^5.0.1"
-    ansi-styles "^5.0.0"
-    react-is "^18.0.0"
 
 pretty-format@^28.1.0:
   version "28.1.0"
