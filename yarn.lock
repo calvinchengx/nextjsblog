@@ -1035,11 +1035,11 @@
     slash "^3.0.0"
     strip-ansi "^6.0.0"
 
-"@jest/environment@^28.1.1":
-  version "28.1.1"
-  resolved "https://registry.yarnpkg.com/@jest/environment/-/environment-28.1.1.tgz#c4cbf85283278d768f816ebd1a258ea6f9e39d4f"
+"@jest/environment@^28.1.1", "@jest/environment@^28.1.2":
+  version "28.1.2"
+  resolved "https://registry.yarnpkg.com/@jest/environment/-/environment-28.1.2.tgz#94a052c0c5f9f8c8e6d13ea6da78dbc5d7d9b85b"
   dependencies:
-    "@jest/fake-timers" "^28.1.1"
+    "@jest/fake-timers" "^28.1.2"
     "@jest/types" "^28.1.1"
     "@types/node" "*"
     jest-mock "^28.1.1"
@@ -1057,12 +1057,12 @@
     expect "^28.1.1"
     jest-snapshot "^28.1.1"
 
-"@jest/fake-timers@^28.1.1":
-  version "28.1.1"
-  resolved "https://registry.yarnpkg.com/@jest/fake-timers/-/fake-timers-28.1.1.tgz#47ce33296ab9d680c76076d51ddbe65ceb3337f1"
+"@jest/fake-timers@^28.1.1", "@jest/fake-timers@^28.1.2":
+  version "28.1.2"
+  resolved "https://registry.yarnpkg.com/@jest/fake-timers/-/fake-timers-28.1.2.tgz#d49e8ee4e02ba85a6e844a52a5e7c59c23e3b76f"
   dependencies:
     "@jest/types" "^28.1.1"
-    "@sinonjs/fake-timers" "^9.1.1"
+    "@sinonjs/fake-timers" "^9.1.2"
     "@types/node" "*"
     jest-message-util "^28.1.1"
     jest-mock "^28.1.1"
@@ -1293,7 +1293,7 @@
   dependencies:
     type-detect "4.0.8"
 
-"@sinonjs/fake-timers@^9.1.1":
+"@sinonjs/fake-timers@^9.1.2":
   version "9.1.2"
   resolved "https://registry.npmjs.org/@sinonjs/fake-timers/-/fake-timers-9.1.2.tgz"
   dependencies:
@@ -3244,12 +3244,12 @@ jest-each@^28.1.1:
     jest-util "^28.1.1"
     pretty-format "^28.1.1"
 
-jest-environment-jsdom@^28.1.1:
-  version "28.1.1"
-  resolved "https://registry.yarnpkg.com/jest-environment-jsdom/-/jest-environment-jsdom-28.1.1.tgz#8bd721915b32f9b196723292c4461a0ad548b55b"
+jest-environment-jsdom@^28.1.2:
+  version "28.1.2"
+  resolved "https://registry.yarnpkg.com/jest-environment-jsdom/-/jest-environment-jsdom-28.1.2.tgz#d3fe82ef8f900c34ab582df7d3002c5079e3d8ab"
   dependencies:
-    "@jest/environment" "^28.1.1"
-    "@jest/fake-timers" "^28.1.1"
+    "@jest/environment" "^28.1.2"
+    "@jest/fake-timers" "^28.1.2"
     "@jest/types" "^28.1.1"
     "@types/jsdom" "^16.2.4"
     "@types/node" "*"
