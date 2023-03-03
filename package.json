@@ -36,7 +36,7 @@
     "jest-environment-jsdom": "^29.4.0",
     "jest-transform-stub": "^2.0.0",
     "react-test-renderer": "^18.2.0",
-    "rimraf": "^3.0.2",
+    "rimraf": "^4.2.0",
     "serve": "^14.2.0"
   }
 }
